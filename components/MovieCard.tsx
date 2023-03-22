@@ -4,12 +4,12 @@ import { BiChevronDown } from 'react-icons/bi'
 import { BsFillPlayFill } from 'react-icons/bs';
 import useInfoModal from '@/hooks/useInfoModel';
 
-import { MovieInterface } from '@/types';
+
 import FavoriteButton from '@/components/FavoriteButton';
 
 
 interface MovieCardProps {
-  data: MovieInterface;
+  data: Record<string, any>;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
@@ -19,7 +19,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const redirectToWatch = useCallback(() => router.push(`/watch/${data.id}`), [router, data.id]);
 
   return (
-    <div className="group bg-zinc-900 col-span relative h-[12vw]">
+    <div className="group bg-zinc-900 col-span relative h-[12vw]" >
       <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
         cursor-pointer
         object-cover
@@ -75,7 +75,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             <div onClick={redirectToWatch} className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300">
               <BsFillPlayFill className="text-black w-4 lg:w-6" />
             </div>
-            <FavoriteButton movieId={data.id} />
+            <FavoriteButton movieId={data?.id} />
             <div onClick={() => openModal(data?.id)} className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
               <BiChevronDown
                 size={30}
@@ -93,8 +93,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
+
 
 export default MovieCard;

@@ -58,7 +58,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
     transition
     hover:border-neutral-300
     ">
-      <Icon className="text-white size={25}" />
+      <AiOutlinePlus className="text-white size={25}" />
     </div>
   )
 }

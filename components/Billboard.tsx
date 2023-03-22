@@ -9,8 +9,8 @@ const Billboard = () => {
   const { openModal } = useInfoModal();
 
   const handleOpenModal = useCallback(() => {
-    handleOpenModal(data?.id);
-  }, [openModal, data?.id])
+    handleOpenModal();
+  }, [])
 
   return (
     <div className="relative h-[56.25vw]">

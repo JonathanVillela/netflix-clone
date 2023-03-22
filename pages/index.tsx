@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <InfoModal visble={isOpen} onClose={closeModal} />
+      <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
       <div className="pb-40">
