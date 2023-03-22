@@ -2,11 +2,8 @@ import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { BiChevronDown } from 'react-icons/bi'
 import { BsFillPlayFill } from 'react-icons/bs';
-import FavoriteButton from './FavoriteButton';
+import FavoriteButton from '@/components/FavoriteButton';
 import useInfoModal from '@/hooks/useInfoModel';
-
-
-
 
 interface MovieCardProps {
   data: Record<string, any>;
