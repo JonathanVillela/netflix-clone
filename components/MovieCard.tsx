@@ -5,7 +5,7 @@ import { BsFillPlayFill } from 'react-icons/bs';
 import useInfoModal from '@/hooks/useInfoModel';
 
 
-import FavoriteButton from '@/components/FavoriteButton';
+import FavoriteButton from './FavoriteButton';
 
 
 interface MovieCardProps {
